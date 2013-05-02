@@ -1,14 +1,5 @@
-7d-buy-it-now service
-=====================
-
-A quick purchase service that can be installed as a widget on a web page
-
-* A service stack razor "shop"
-* Pass it a releaseId and/or trackId ~/{countrycode}/{releaseId}/{trackId}
-* Once signed in, it allows you to enter payment details or a voucher
-* Purchased item will be added to your locker in the normal way
-* It uses the 7digital api via the 7d Api Wrapper
-* The whole thing to be hosted over https
+instant.7digital.com Buy Now widget
+===================================
 
 Usage
 =====
