@@ -1,8 +1,5 @@
-instant.7digital.com Buy Now widget
-===================================
-
-Usage
-=====
+Usage Instructions
+==================
 
 The widget itself is very simple to set-up
 In order to create the linking button (or HTML element of your choice), you create the following tag:
