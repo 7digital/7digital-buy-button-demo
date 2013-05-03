@@ -28,7 +28,7 @@ You *must* then include the following script tags at the end of your html page:
 ```html
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
-<script type="text/javascript" src="http://instant.7digital.com/scripts/7d-buyitnow.js"></script>
+<script type="text/javascript" src="http://instant.7digital.com/scripts/7d-buyitnow.min.js"></script>
 ```
 
 Then - any element you click on with the correctly specified class (`7d-buynow`) will become a 7digital BuyItNow button.
