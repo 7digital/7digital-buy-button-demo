@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Track Search n Buy Demo</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <link href="http://css.cdn.7static.com/s/corecss/-1858331358/" rel="stylesheet"/>
+    <link href="./css/demo.css" rel="stylesheet"/>
+</head>
+    <body id="c">
+        <div id="sidebar"></div>
+        <script id="tpl-track-chart-list-item" type="text/html">        
+            <%= change %> - <%= position %>
+            <div style="background: url('<%= track.release.image %>') no-repeat" class="rows">
+                <div class="track">
+                    <strong><%= track.title %></strong> <small>from</small> <em><%= track.release.title %></em><br /><small>by</small> <%= track.artist.appearsAs %>
+                    <span class="large price" style="display: block; font-size: larger; padding-top: 2px"><%= track.price.formattedPrice %></span>
+                </div>
+                
+                <button class="7d-buynow" data-trackid="<%= track.id %>" data-partner="712" style="float:left">Buy Track</button>
+                <% if (track.release.type !== "Single") { %>
+                <button class="7d-buynow" data-releaseid="<%= track.release.id %>" data-partner="712" style="float:left">Buy album</button>
+                <% } %>
+            </div>
+        </script>
+        <script id="tpl-release-chart-list-item" type="text/html">        
+            <%= change %> - <%= position%>
+            <div style="background: url('<%= release.image %>') no-repeat" class="rows">
+                <div class="track">
+                    <strong><%= release.title %></strong> <small>from</small> <em><%= release.title %></em><br /><small>by</small> <%= release.artist.appearsAs %>
+                    <span class="large price" style="display: block; font-size: larger; padding-top: 2px"><%= release.price.formattedPrice %></span>
+                </div>
+                <button class="7d-buynow" data-releaseid="<%= release.id %>" data-partner="712" style="float:left">Buy album</button>
+            </div>
+        </script>
+    </body>
+</html>
+<script type="text/javascript" src="./scripts/lib/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./scripts/lib/jquery/jquery-ui-1.9.2.min.js"></script>
+<script type="text/javascript" src="./scripts/lib/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="./scripts/lib/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="http://instant.7digital.com/scripts/7d-buyitnow.js"></script>
+<script type="text/javascript" src="./scripts/demo/chart.js"></script>

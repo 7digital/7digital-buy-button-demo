@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>BuyItNowTest</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link href="http://css.cdn.7static.com/s/corecss/-1858331358/" rel="stylesheet"/>
+    </head>
+    <body>
+        <button class="7d-buynow" data-releaseid="1234">Buy Album</button>
+        <button class="7d-buynow" data-trackid="12345">Buy Track</button>
+        <button class="7d-buynow" data-trackid="12345" data-releaseid="1302">Buy Specific Track</button>
+        <button class="7d-buynow" data-trackid="23243634" data-country="US" data-partner="712">Buy US Track</button>
+        <button class="7d-buynow" data-trackid="12345" data-partner="712">Buy Track partner712</button>
+        <button class="7d-buynow" data-trackid="8515447">Free Track</button>
+        <button class="7d-buynow">Broken button</button>
+        <div style="margin: 10px 0 0 0; padding:0">
+            <iframe src="iframe.htm?releaseid=1302&trackid=12345&buttontext=iFrame%20Example" seamless="seamless" width="120" height="30" scrolling="no" ></iframe>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+<script type="text/javascript" src="http://instant.7digital.com/scripts/7d-buyitnow.js"></script>
