@@ -31,4 +31,25 @@
 <script type="text/javascript" src="http://instant.7digital.com/scripts/7d-buyitnow.min.js"></script>
 <script type="text/javascript" src="./scripts/demo/blocky.js"></script>
 <script type="text/javascript" src="./scripts/demo/search.js"></script>
+<script type="text/javascript">
+    
+    var settings = {
+        apiUrl: "http://api.7digital.com/1.2/track/search?oauth_consumer_key=YOUR_KEY_HERE&pagesize=50&imagesize=175&q=",
+        displayElement: $("#sidebar"),
+        templateElement: $("#tpl-track-list-item"),
+        searchTextFieldElement: $("#searchquery"),
+        defaultQuery: "great gig in the sky",
+        searchResultItem: function (searchResult) {
+            return searchResult.track;
+        }
+    };
+    
+    var searchDemo = new Search(settings).Setup().RunSearch("", 1);
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+            searchDemo.LoadNext();
+        }
+    });
+</script>
 
