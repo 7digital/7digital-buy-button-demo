@@ -1,0 +1,79 @@
+﻿*, html, body {
+	background-color: white;
+}
+
+body
+{
+	padding: 20px;
+}
+
+ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+input#searchquery
+{
+	width: 500px;
+	font-size: 1.5em;
+	margin-bottom:10px
+}
+
+li
+{
+	list-style: none;
+	list-style-position: inside;
+	margin: 5px 0 5px 0;
+	padding: 5px 0 5px 0;
+}
+
+.pleasewait
+{
+	background: url('../img/ajax-loader.gif') no-repeat right;
+	padding-right: 10px;
+}
+
+.track
+{
+	float: left;
+	height: 60px;
+	display: block;
+	padding-right: 20px;
+	width: 500px;
+}
+
+#sidebar div.rows
+{
+    height: 100px;
+    padding-left: 110px;
+    padding-bottom: 20px;
+    min-height: 100px;
+}
+
+div.info-fadein
+{
+    float: left;
+    margin: 0 20px 20px 0;
+    text-align: center;
+    max-width: 175px;
+    position: relative;
+}
+
+img.packshot 
+{
+    width: 175px;
+    height: 175px;    
+}
+h6.details
+{
+    position: absolute;
+    padding: 10px;
+    font-size: 14px;
+    background: rgb(255,255,255);
+    background: rgba(255,255,255,0.9);
+    line-height: 20px;
+    display: none;
+    width: 160px;
+    border: 1px grey;
+}
