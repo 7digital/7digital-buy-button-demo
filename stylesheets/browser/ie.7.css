@@ -1,0 +1,466 @@
+﻿/*
+ * IE7 Workounds, Fixes and Hacks for 7digital.com
+ * (c) 7digital.com
+ */
+
+/* ------------------------------------------------------------------------- */
+
+/* GLOBAL > BASE ELEMENTS
+/* ------------------------------------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	border-style: hidden;
+} 
+
+/* bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+
+img { -ms-interpolation-mode: bicubic; }
+
+.price { padding-right: 6px; }
+
+hr { height: 2px; }
+
+.zoom { cursor: url(~/static/graphics/cursors/zoomin.cur), pointer; }
+
+/* DATA URI OVERRIDES */
+
+#c { background-image: url(~/static/graphics/shared/noised.png); }
+
+.vertical .carousel-control { background-image: url(~/static/graphics/shared/cccbc4-vertical.png); }
+
+fieldset input[type="text"],
+fieldset input[type="password"],
+fieldset input[type="select"],
+fieldset input[type="search"],
+fieldset input[type="email"],
+fieldset input[type="date"],
+fieldset select { background-image: url(~/static/graphics/forms/input-alt.png); }
+
+/* ------------------------------------------------------------------------- */
+/* FORMS > BUTTON STRIPS
+/* ------------------------------------------------------------------------- */
+
+button { padding: 0 0 2px; }
+
+/* ------------------------------------------------------------------------- */
+/* FORMS > FEEDBACK
+/* ------------------------------------------------------------------------- */
+
+.feedback { overflow: auto; }
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > PLAYER
+/* ------------------------------------------------------------------------- */
+
+#progress-bar { margin-top: -18px; }
+
+#lb-start { top: 17px; }
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > USER HEADER
+/* ------------------------------------------------------------------------- */
+
+#page-head { padding-bottom: 9px; }
+
+#country-select-header { width: 42px; }
+
+#country-select-header .arrow-tag { top: -14px; }
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > HEADER
+/* ------------------------------------------------------------------------- */
+
+#header-tools-container li {
+
+	float: left;
+	
+}
+
+#header-tools-search-input { 
+
+	line-height: 1.1em;
+
+}
+
+#header-tools-search-button {
+	
+	height: 32px;
+	
+}
+
+.header-tools-help {
+    
+	display: block; 
+    float: left;
+	padding-right: 6px;
+    padding-left: 0;
+	border-right: 1px solid #d2d2d2;
+    border-left: 0 none;
+    margin-left: 0;
+    margin-right: 6px;
+
+}
+
+#header-tools-music { 
+
+	display: block; 
+	float: left; 
+	padding-left: 6px;
+	padding-right: 6px;
+    border-right: 1px solid #d2d2d2;
+    margin-right: 6px;
+	
+}
+
+#header-tools-player {
+    
+    display: block; 
+    float: left;
+    padding-right: 6px;
+    border-right: 1px solid #d2d2d2;
+    margin-right: 6px;
+}
+
+.header-tools-signup {
+    
+	display: block; 
+    float: left;
+    padding-right: 6px;
+    border-right: 1px solid #d2d2d2;
+    margin-right: 6px;
+
+}
+
+.header-tools-signin {
+    
+	display: block; 
+    float: left;
+    padding-right: 6px;
+    border-right: 1px solid #d2d2d2;
+    margin-right: 6px;
+
+}
+
+#header-tools-signout {
+    
+	display: block; 
+    float: left;
+    padding-right: 6px;
+    border-right: 1px solid #d2d2d2;
+    margin-right: 6px;
+	
+}
+
+#header-tools-sign-divider {
+	
+	display: none; 
+    float: left;
+    margin-right: 2px;
+	margin-left: 2px;
+	
+}
+
+#header-tools-account {
+    
+	display: block; 
+    float: left;
+    padding-right: 6px;
+    border-right: 1px solid #d2d2d2;
+    margin-right: 6px;
+
+}
+
+.header-tools-country-container {
+	
+    
+}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > HEADER > Header Navigation
+/* ------------------------------------------------------------------------- */
+
+.header-navigation-constraint {
+	
+	z-index: 1984; /* Fixes stacking context bug: http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html */
+	
+}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > FOOTER
+/* ------------------------------------------------------------------------- */
+
+#social li { display: inline-block; }
+#newsletter { margin-bottom: 42px;}
+#newsletter-form * { z-index: 1; }
+
+#newsletter-form button { z-index: 2; }
+
+#newsletter-form label { z-index: 3; }
+
+#newsletter button { padding-top: 3px; }
+
+#newsletter input { width: 185px; }
+
+#copyright {
+	float: none;
+	text-align: right;
+}
+
+.flyout { width: 200px; }
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > RELEASE UNIT
+/* ------------------------------------------------------------------------- */
+
+.add {
+	position: relative;
+	top: 3px;
+}
+
+.preview {
+	background-image: url(~/static/graphics/shared/preview-button.png);
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > CAROUSELS
+/* ------------------------------------------------------------------------- */
+
+.horizontal .preview {
+	bottom: 9px;
+	right: 8px;
+}
+
+.horizontal .scrollable { margin-top: 24px; }
+
+.pager {
+	position: relative;
+	top: 9px;
+}
+
+.horizontal .pager a { float: left; }
+
+.horizontal .pager {
+	position: absolute;
+	right: 3px;
+	text-align: center;
+	top: 9px;
+}
+
+.vertical .unit { width: 267px; }
+
+.vertical .pager {
+	position: absolute;
+	top: 6px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > CAROUSELS > New horizontal carousels
+/* ------------------------------------------------------------------------- */
+
+.horizontal-carousel-container { width: 682px; }
+.horizontal-carousel-slot { top: 20px; }
+.horizontal-carousel-button { display: block; position: static; width: 200px; }
+.horizontal-carousel-button span { display: block; position: static; text-indent: 0; width: 50px; font-size: 12px; }
+.horizontal-carousel-pager { margin-right: 50px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > PLAYER
+/* ------------------------------------------------------------------------- */
+
+#jplayer_load_bar { top: 16px; }
+
+#lb-end,
+#lb-start { top: 17px; }
+
+/* ------------------------------------------------------------------------- */
+/* RELEASE PAGE
+/* ------------------------------------------------------------------------- */
+
+tfoot td .buy-link { margin-top: 0; }
+
+.trackpreview .preview { float: left; }
+
+.release-details { overflow: auto; }
+
+.quality-selector { margin-bottom: 12px; }
+
+tfoot .play-all { width: 300px; }
+
+.packshot .play-all { width: 8em; }
+
+.preview-all {
+	float: left;
+	margin-right: 3px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOAD PAGE
+/* ------------------------------------------------------------------------- */
+
+.download-options {
+	float: left;
+	left: 50%;
+	position: relative;
+}
+
+.download-options li {
+	float: left;
+	position: relative;
+	right: 50%;
+}
+
+#download-manager-status {
+	float: right;
+	margin-top: -58px;
+	position: relative;
+}
+
+.pagesize-selector { width: 200px; }
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOAD OPTIONS MODAL
+/* ------------------------------------------------------------------------- */
+
+#download-choice .choice {
+	padding: 0;
+	width: 50%;
+}
+
+/* ------------------------------------------------------------------------- */
+/* STOREFRONT
+/* ------------------------------------------------------------------------- */
+
+.page-separator { height: 1px; }
+
+.carousel-tabs li {
+	float: left;
+	width: 241px;
+}
+
+.feature-carousel { height: 1%; }
+
+/* ------------------------------------------------------------------------- */
+/* EDITORIAL PAGES > Templates > Playlist
+/* ------------------------------------------------------------------------- */
+
+.editorial-playlist-item p.unit-title {
+	margin-bottom: 9px;
+	margin-top: 0px;
+}
+
+.editorial-playlist form.price-unit.carousel-price-buy {
+    margin-top: -5px; }
+
+/* ------------------------------------------------------------------------- */
+/* EDITORIAL PAGES > Templates > Playlist
+/* ------------------------------------------------------------------------- */
+
+.help-page dl,
+.help-page dt,
+.help-page dd { width: 100%; }
+
+.help-page dd { width: 98%; }
+
+/* ---------------------------------------------------------------------------- */
+/* EDITORIAL PAGES > Templates > Interview > Single product unit 100px packshot
+/* ---------------------------------------------------------------------------- */
+
+.single-100 .packshot .preview {
+
+    bottom: 10px;
+    right: 5px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Top navigation
+/* ------------------------------------------------------------------------- */
+
+header-skip-link:focus {
+	background: #000000;}
+	
+/* ------------------------------------------------------------------------- */
+/* Genre pages > Genre page
+/* ------------------------------------------------------------------------- */
+
+.grid-layout .packshot .preview, .grid-layout .packshot .preview:active {
+    right: -96px;
+}
+
+.view-option-switch {
+ 
+    border: 1px solid #C9C6B6;
+    
+}
+
+.list.current,
+.grid.current {
+
+    background-color: #f7f1e1;
+    
+}
+
+/* ------------------------------------------------------------------------- */
+/* Checkout > Trust
+/* ------------------------------------------------------------------------- */
+
+#checkout-trust .digicert-seal { width: 100px; }
+
+/* ---------------------------------------------------------------------------- */
+/* Product list table
+/* ---------------------------------------------------------------------------- */
+
+.productlist .preview {
+
+    bottom: 11px;
+    right: 9px;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* Modules > Genres > Genre index page > Grid layout
+/* ---------------------------------------------------------------------------------------- */
+
+.grid-layout .genre-index-group-list {
+
+	width: 966px;
+	clear: none;
+	padding-bottom: 36px;	
+	
+}
+
+.grid-layout .genre-index-group-heading {
+	
+	width: 966px;
+	clear: none;
+	
+}
+
+.grid-layout .genre-index-item {
+	
+	margin-bottom: 18px;
+	
+}
+
+.grid-layout .genre-index-item-figurecaption {
+
+	left: 0;	
+	
+}
+
+/* Images wrapped in link are not hoverable or clickable. We can't have the hover styles apply when the link
+isn't clickable. We also can't add hover styles to the figurecaption (ie a element other than an a tag). 
+We're a bit stuck. Better to have no hover styles, than wrong hover styles. Lesser of two evils. We still have
+the pointer, and something underlined that looks like a link to attract the user.
+Root cause of the problem looks like a layout bug in IE7. Long live IE7! */
+
+/* Negate the hover and focus styles for the panel */
+.grid-layout .genre-index-item-link:hover,
+.grid-layout .genre-index-item-link:focus {
+	
+	background-color: #FFFAED;
+	color: #005CA0;
+	
+}

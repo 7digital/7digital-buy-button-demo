@@ -1,0 +1,59 @@
+﻿/*
+ * IE9 Workounds, Fixes and Hacks for 7digital.com
+ * (c) 7digital.com
+ */
+
+/* ------------------------------------------------------------------------- */
+
+/* GLOBAL > UI > FORMS
+/* ------------------------------------------------------------------------- */
+
+#user-tools button { padding: 2px 9px; }
+
+.storefront .search-form .cta { top: 0; }
+
+/* ------------------------------------------------------------------------- */
+/* RELEASE PAGE
+/* ------------------------------------------------------------------------- */
+
+.popularity-bar { background: #CADAE2; }
+
+.popularity-value { background: #4B9DC9; }
+
+/* ------------------------------------------------------------------------- */
+/* Header > User tools (search, sign in, store select, &c.)
+/* ------------------------------------------------------------------------- */
+
+#header-tools-search-input { line-height: 1.2em; }
+#header-tools-search-button { height: 22px; }
+
+/* ------------------------------------------------------------------------- */
+/* Header > Basket
+/* ------------------------------------------------------------------------- */
+
+#header-basket-size-value {
+
+	float: none;	
+	
+}
+
+/* ------------------------------------------------------------------------- */
+/* Right-hand navigation
+/* ------------------------------------------------------------------------- */
+
+.side-menu-heading { background-color: #333333; background-image: url(~/static/graphics/forms/button-overlay.png); }
+.side-menu-heading:before { background-color: #333333; background-image: url(~/static/graphics/forms/button-overlay.png); } /* Left wing */
+.side-menu-heading:after { background-color: #333333; background-image: url(~/static/graphics/forms/button-overlay.png); } /* Right wing */
+.side-menu-heading-tag { border-top: 1px solid #585858; border-bottom: 1px solid #333333; }
+.side-menu-heading-tag:after { border-top: 9px solid #111111; bottom: -8px;} /* Bottom right fold */
+
+/* ------------------------------------------------------------------------- */
+/* Horizontal Carousels
+/* ------------------------------------------------------------------------- */
+
+.horizontal-carousel-label {
+	
+	width: 310px;
+	
+}
+

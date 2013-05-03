@@ -1,0 +1,27 @@
+﻿/*
+ * Webkit workarounds for 7digital.com
+ * (c) 7digital.com
+ */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	.buy-link .add { padding: 6px 10px; }
+
+	.singleline + .button-strip,
+	.singleline + button {
+		position: relative;
+		top: -3px;
+	}
+	
+	#header-tools-search-button { height: 22px; }
+	#header-tools-search-label.is-waiting:after { left: 521px; }
+	#hmv-newsletter-form-label { margin-top: -3px; }
+	/* arrows pointing right after root level links */
+	.dropdown-trigger a:after { top: 19px; }
+
+	/* arrows pointing down after active root level links */
+	.dropdown-trigger.megadropdown-active a:after { top: 21px; }
+	
+	.small-gear { background: url(~/static/graphics/sprites/sprite-vertical.png) no-repeat 0 -2343px; }
+	.delete-card-button { position: relative; top: -10px; }
+	
+}
