@@ -13,9 +13,10 @@
             <div class="info-fadein">
                 <img src="<%= release.image %>" alt="<%= release.title %>" class="packshot" />
                 <h6 class="details">
-                    <em><%= release.title %></em>
+                    <em class="release-title"><%= release.title %></em>
                     <br />
                     <a href="artistreleases.htm?artistId=<%=release.artist.id%>"><%= release.artist.appearsAs %></a>
+                    <span id="tracklist"></span>
                 </h6>
                 <button class="7d-buynow" data-releaseid="<%= release.id %>" data-partner="712">Buy <%=release.type%> <%= release.price.formattedPrice %></button><br />
                 <a href="morelikethis.htm?releaseId=<%=release.id%>&releaseTitle=<%=release.artist.appearsAs%>%20<%=release.title%>">more like this</a>
@@ -29,4 +30,25 @@
 <script type="text/javascript" src="./scripts/lib/backbone/backbone-min.js"></script>
 <script type="text/javascript" src="http://instant.7digital.com/scripts/7d-buyitnow.min.js"></script>
 <script type="text/javascript" src="./scripts/demo/blocky.js"></script>
-<script type="text/javascript" src="./scripts/demo/releasesearch.js"></script>
+<script type="text/javascript" src="./scripts/demo/search.js"></script>
+<script type="text/javascript">
+    
+    var settings = {
+        apiUrl: "http://api.7digital.com/1.2/release/search?oauth_consumer_key=YOUR_KEY_HERE&type=album&pagesize=50&imagesize=175&q=",
+        displayElement: $("#sidebar"),
+        templateElement: $("#tpl-release-search-item"),
+        searchTextFieldElement: $("#searchquery"),
+        defaultQuery: "in rainbows",
+        searchResultItem: function (searchResult) {
+            return searchResult;
+        }
+    };
+
+    var searchDemo = new Search(settings).Setup().RunSearch("", 1);
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+            searchDemo.LoadNext();
+        }
+    });
+</script>
