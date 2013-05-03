@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Track Search n Buy Demo</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link href="http://css.cdn.7static.com/s/corecss/-1858331358/" rel="stylesheet"/>
+        <link href="./css/demo.css" rel="stylesheet"/>
+    </head>
+    <body id="c">
+        Search: <input type="text" value="" id="searchquery"/>
+        <div id="sidebar"></div>
+        <script id="tpl-release-search-item" type="text/html">
+            <div class="info-fadein">
+                <img src="<%= release.image %>" alt="<%= release.title %>" class="packshot" />
+                <h6 class="details">
+                    <em><%= release.title %></em>
+                    <br />
+                    <a href="artistreleases.htm?artistId=<%=release.artist.id%>"><%= release.artist.appearsAs %></a>
+                </h6>
+                <button class="7d-buynow" data-releaseid="<%= release.id %>" data-partner="712">Buy <%=release.type%> <%= release.price.formattedPrice %></button><br />
+                <a href="morelikethis.htm?releaseId=<%=release.id%>&releaseTitle=<%=release.artist.appearsAs%>%20<%=release.title%>">more like this</a>
+            </div>
+        </script>
+    </body>
+</html>
+<script type="text/javascript" src="./scripts/lib/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./scripts/lib/jquery/jquery-ui-1.9.2.min.js"></script>
+<script type="text/javascript" src="./scripts/lib/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="./scripts/lib/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="http://instant.7digital.com/scripts/7d-buyitnow.js"></script>
+<script type="text/javascript" src="./scripts/demo/blocky.js"></script>
+<script type="text/javascript" src="./scripts/demo/releasesearch.js"></script>
