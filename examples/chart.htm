@@ -16,9 +16,9 @@
                     <span class="large price" style="display: block; font-size: larger; padding-top: 2px"><%= track.price.formattedPrice %></span>
                 </div>
                 
-                <button class="7d-buynow" data-trackid="<%= track.id %>" data-partner="712" style="float:left">Buy Track</button>
+                <button class="sd-buynow" data-trackid="<%= track.id %>" data-partner="712" style="float:left">Buy Track</button>
                 <% if (track.release.type !== "Single") { %>
-                <button class="7d-buynow" data-releaseid="<%= track.release.id %>" data-partner="712" style="float:left">Buy album</button>
+                <button class="sd-buynow" data-releaseid="<%= track.release.id %>" data-partner="712" style="float:left">Buy album</button>
                 <% } %>
             </div>
         </script>
@@ -29,7 +29,7 @@
                     <strong><%= release.title %></strong> <small>from</small> <em><%= release.title %></em><br /><small>by</small> <%= release.artist.appearsAs %>
                     <span class="large price" style="display: block; font-size: larger; padding-top: 2px"><%= release.price.formattedPrice %></span>
                 </div>
-                <button class="7d-buynow" data-releaseid="<%= release.id %>" data-partner="712" style="float:left">Buy album</button>
+                <button class="sd-buynow" data-releaseid="<%= release.id %>" data-partner="712" style="float:left">Buy album</button>
             </div>
         </script>
     </body>
