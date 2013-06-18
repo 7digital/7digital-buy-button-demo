@@ -18,7 +18,7 @@
                     <a href="artistreleases.htm?artistId=<%=release.artist.id%>"><%= release.artist.appearsAs %></a>
                     <span id="tracklist"></span>
                 </h6>
-                <button class="7d-buynow" data-releaseid="<%= release.id %>" data-partner="712">Buy <%=release.type%> <%= release.price.formattedPrice %></button><br />
+                <button class="sd-buynow" data-releaseid="<%= release.id %>" data-partner="712">Buy <%=release.type%> <%= release.price.formattedPrice %></button><br />
                 <a href="morelikethis.htm?releaseId=<%=release.id%>&releaseTitle=<%=release.artist.appearsAs%>%20<%=release.title%>">more like this</a>
             </div>
         </script>
