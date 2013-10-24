@@ -80,5 +80,11 @@ h6.details
 
 em.release-title 
 {
-	font-size:larger
+	font-size:larger;
+}
+div.button-html{
+	background-color:white;
+	border:1px solid #999;
+	padding:5px;
+	
 }
