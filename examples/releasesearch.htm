@@ -21,6 +21,8 @@
                 </h6>
                 <button class="sd-buybutton" data-releaseid="<%= release.id %>" data-partner="712">Buy <%=release.type%> <%= release.price.formattedPrice %></button><br />
                 <a href="morelikethis.htm?releaseId=<%=release.id%>&releaseTitle=<%=release.artist.appearsAs%>%20<%=release.title%>">more like this</a>
+				
+				<div class="button-html">&lt;button class="sd-buybutton" data-releaseid="<%= release.id %>" data-partner="712"&gt;Buy <%=release.type%> <%= release.price.formattedPrice %>&lt;/button&gt;</div>
             </div>
         </script>
     </body>
